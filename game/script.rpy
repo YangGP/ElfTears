@@ -12,12 +12,26 @@ init python:
 # 声明此游戏使用的角色。颜色参数可使角色姓名着色。
 
 define p = Character("[player_name]", color="#c8ffc8")
+define x = Character("希薇娅", color="#1d5e1d")
+define k = Character("克拉丽丝", color="#45ac45")
+define q = Character("绮莉", color="#2ebc2e")
+define s = Character(None, kind=nvl)
 
 define n = Character("Nora", color="#3ada9c")
 # 定义时直接计算 zoom
 image nora casual open = Transform("images/Nora_NoranekoGames/nora casual_open.png", zoom=get_height_zoom("images/Nora_NoranekoGames/nora casual_open.png", 900), yalign=1.0)
 image nora casual smile = Transform("images/Nora_NoranekoGames/nora casual_smile.png", zoom=get_height_zoom("images/Nora_NoranekoGames/nora casual_smile.png", 900), yalign=1.0)
 image nora casual closed smile = Transform("images/Nora_NoranekoGames/nora casual_closed_smile.png", zoom=get_height_zoom("images/Nora_NoranekoGames/nora casual_closed_smile.png", 900), yalign=1.0)
+
+# 假设你的游戏标准分辨率是 1920x1080
+# 这是一个万能背景适配变换
+transform bg_cover:
+    # 确保图片锚点和位置都在正中央
+    xanchor 0.5 yanchor 0.5
+    xpos 0.5 ypos 0.5
+    
+    # 核心算法：让图片强行覆盖 1920x1080 的区域，Ren'Py 会自动做等比最大化处理
+    size (1920, 1080)
 
 # 动画定义
 transform sudden_shock:
