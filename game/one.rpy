@@ -18,12 +18,11 @@ label part_one:
     "如同一部无声的家族史诗，服装的改变紧随着历史的进程"
     "铜牌上的名字一个接一个掠过直至最后，上面写着"
 
-    $ player_name = renpy.input("你的名字是？", default="凛恩", length=8, screen="input")
-    $ player_name = player_name.strip()
+    $ player_name = renpy.input("你的名字是？", default="凛恩", length=8, screen="input").strip()
     if not player_name:
         $ player_name = "凛恩"
 
-    "[player_name]\·范斯特"
+    "[player_name]·范斯特"
     p """
     人们总说能力越大责任越大,但坐上某个位置之前在我看来我还只是个什么都不懂的混蛋
 
@@ -183,6 +182,7 @@ label part_one:
 label part_two:
     scene bg school door at bg_cover
     "司机" "到学院了"
+    show x clothes normal
     x "[player_name]快下车跟我来"
     s """
     维克里安学院

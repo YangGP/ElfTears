@@ -1,16 +1,8 @@
 ﻿# 游戏的脚本可置于此文件中。
 
-init python:
-    # 封装一个函数：输入你想要的“目标高度”，它会自动帮你计算出 zoom 比例
-    def get_height_zoom(img_path, target_height):
-        # 获取图片原始大小
-        width, height = renpy.image_size(img_path)
-        # 计算比例
-        return float(target_height) / float(height)
-
-
+# 默认名字，可以在游戏开始时让玩家输入
+default player_name = "凛恩"
 # 声明此游戏使用的角色。颜色参数可使角色姓名着色。
-
 define p = Character("[player_name]", color="#c8ffc8")
 define x = Character("希薇娅", color="#1d5e1d")
 define k = Character("克拉丽丝", color="#45ac45")
@@ -18,10 +10,6 @@ define q = Character("绮莉", color="#2ebc2e")
 define s = Character(None, kind=nvl)
 
 define n = Character("Nora", color="#3ada9c")
-# 定义时直接计算 zoom
-image nora casual open = Transform("images/Nora_NoranekoGames/nora casual_open.png", zoom=get_height_zoom("images/Nora_NoranekoGames/nora casual_open.png", 900), yalign=1.0)
-image nora casual smile = Transform("images/Nora_NoranekoGames/nora casual_smile.png", zoom=get_height_zoom("images/Nora_NoranekoGames/nora casual_smile.png", 900), yalign=1.0)
-image nora casual closed smile = Transform("images/Nora_NoranekoGames/nora casual_closed_smile.png", zoom=get_height_zoom("images/Nora_NoranekoGames/nora casual_closed_smile.png", 900), yalign=1.0)
 
 # 假设你的游戏标准分辨率是 1920x1080
 # 这是一个万能背景适配变换
@@ -63,6 +51,8 @@ transform rotate_360_once:
 
 label start:
 
+    jump part_two
+
     $ first_meet = True
 
     # 显示一个背景。此处默认显示占位图，但您也可以在图片目录添加一个文件
@@ -96,7 +86,7 @@ label start:
             "精灵之泪":
                 n "您选择了查看精灵之泪。"
                 n "这是一个非常有趣的选项！"
-                jump part_one
+                jump part_two
             "背景变化":
                 n "您选择了查看背景变化。"
                 jump bg_change
