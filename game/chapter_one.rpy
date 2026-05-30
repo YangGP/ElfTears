@@ -1,4 +1,4 @@
-label part_one:
+label chapter1_part1:
     s """
     海风126年，精灵之泪现世
 
@@ -179,7 +179,7 @@ label part_one:
     p "（希望不会出些什么事扰乱我和希薇娅的假期）"
     "……"
 
-label part_two:
+label chapter1_part2:
     scene bg school door at bg_cover
     "司机" "到学院了"
     show x clothes normal
@@ -311,7 +311,7 @@ label part_two:
     x "我也这么认为谢谢你，雷诺德校长"
     "雷诺德" "小事一桩，祝你和[player_name]玩得开心"
 
-label part_three:
+label chapter1_part3:
     #过场cg
     x "我已经迫不及待要见到她了"
     "离开雷诺德的办公室，我和希薇娅继续在玛格丽特的带领下先去见见珍妮芙教授的学生——克拉丽丝"
@@ -689,7 +689,7 @@ label part_three:
     p "我听到了哈"
     x "笨蛋！"
 
-label part_four:
+label chapter1_part4:
     #切换咖啡馆CG
     "前台服务员" "您好，欢迎光临凯特咖啡馆。"
     p "（堪堪下午，我许久未觉得时光如此漫长。）"
@@ -956,7 +956,7 @@ label part_four:
     "罗莎" "嗯哼，有你这句话姐就放心了。来，快让姐亲一个。"
     p "离我远点。"
 
-label part_five:
+label chapter1_part5:
     # （插入三位女主的萌版CG）
     "你回到了中午与克拉丽丝见面的那处住所，正准备敲门。"
     "（绮莉开门）"

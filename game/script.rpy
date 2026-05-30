@@ -51,7 +51,7 @@ transform rotate_360_once:
 
 label start:
 
-    jump part_two
+    jump chapter1_part2
 
     $ first_meet = True
 
@@ -86,7 +86,7 @@ label start:
             "精灵之泪":
                 n "您选择了查看精灵之泪。"
                 n "这是一个非常有趣的选项！"
-                jump part_two
+                jump chapter1_part1
             "背景变化":
                 n "您选择了查看背景变化。"
                 jump bg_change
