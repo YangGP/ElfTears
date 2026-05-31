@@ -3,13 +3,13 @@
 # 默认名字，可以在游戏开始时让玩家输入
 default player_name = "凛恩"
 # 声明此游戏使用的角色。颜色参数可使角色姓名着色。
-define p = Character("[player_name]", color="#c8ffc8")
-define x = Character("希薇娅", color="#1d5e1d")
-define k = Character("克拉丽丝", color="#45ac45")
-define q = Character("绮莉", color="#2ebc2e")
+define p = Character("[player_name]", color="#1a365d")
+define x = Character("希薇娅", color="#722f37")
+define k = Character("克拉丽丝", color="#0b5334")
+define q = Character("绮莉", color="#3a4750")
 define s = Character(None, kind=nvl)
 
-define n = Character("Nora", color="#3ada9c")
+define n = Character("Nora", color="#0b5334")
 
 # 假设你的游戏标准分辨率是 1920x1080
 # 这是一个万能背景适配变换
@@ -51,54 +51,61 @@ transform rotate_360_once:
 
 label start:
 
-    jump chapter1_part2
-
-    $ first_meet = True
-
-    # 显示一个背景。此处默认显示占位图，但您也可以在图片目录添加一个文件
-    # （命名为 bg room.png 或 bg room.jpg）来显示。
-
-    scene bg park_1_day
-
-    # 显示角色立绘。此处使用了占位图，但您也可以在图片目录添加命名为
-    # eileen happy.png 的文件来将其替换掉。
-
-    show nora casual open
-
-    # 此处显示各行对话。
-
-    n "您好，我是 Nora。"
-    n "这是一个简单的 Ren'Py 游戏示例。"
+    menu:
+        "精灵之泪":
+            n "您选择了查看精灵之泪。"
+            n "这是一个非常有趣的选项！"
+            jump chapter1_part1
+        "测试选项":
+            n "您选择了测试选项。"
+            jump menu_start
 
     label menu_start:
+        $ first_meet = True
 
-        if first_meet:
-            show nora casual smile
-            n "这是我们第一次见面！"
-            n "现在选择您想要的下一步："
-        else:
-            scene bg park_1_day
-            show nora casual smile
-            n "欢迎回来！"
-            n "现在选择您想要的下一步："
+        # 显示一个背景。此处默认显示占位图，但您也可以在图片目录添加一个文件
+        # （命名为 bg room.png 或 bg room.jpg）来显示。
 
-        menu:
-            "精灵之泪":
-                n "您选择了查看精灵之泪。"
-                n "这是一个非常有趣的选项！"
-                jump chapter1_part1
-            "背景变化":
-                n "您选择了查看背景变化。"
-                jump bg_change
-            "人物变化":
-                n "您选择了查看人物变化。"
-                jump char_change
-            "简单动画":
-                n "您选择了查看简单动画。"
-                jump anim
-            "结束游戏":
-                n "这就结束了吗？好吧，结束游戏！"
-                jump end
+        scene bg park_1_day
+
+        # 显示角色立绘。此处使用了占位图，但您也可以在图片目录添加命名为
+        # eileen happy.png 的文件来将其替换掉。
+
+        show nora casual open
+
+        # 此处显示各行对话。
+
+        n "您好，我是 Nora。"
+        n "这是一个简单的 Ren'Py 游戏示例。"
+
+
+    if first_meet:
+        show nora casual smile
+        n "这是我们第一次见面！"
+        n "现在选择您想要的下一步："
+    else:
+        scene bg park_1_day
+        show nora casual smile
+        n "欢迎回来！"
+        n "现在选择您想要的下一步："
+
+    menu:
+        "精灵之泪":
+            n "您选择了查看精灵之泪。"
+            n "这是一个非常有趣的选项！"
+            jump chapter1_part1
+        "背景变化":
+            n "您选择了查看背景变化。"
+            jump bg_change
+        "人物变化":
+            n "您选择了查看人物变化。"
+            jump char_change
+        "简单动画":
+            n "您选择了查看简单动画。"
+            jump anim
+        "结束游戏":
+            n "这就结束了吗？好吧，结束游戏！"
+            jump end
 
 
     label bg_change:
