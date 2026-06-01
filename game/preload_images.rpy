@@ -35,6 +35,7 @@ transform q_gal_sprite_near:
 transform q_gal_base:
     zoom 0.5
     yanchor 1.0
+    xpos 0.5
     ypos 1.7
 
 transform q_gal_left:
@@ -55,6 +56,7 @@ transform k_gal_sprite_near:
 transform k_gal_base:
     zoom 0.7
     yanchor 1.0
+    xpos 0.5
     ypos 1.7
 
 transform k_gal_left:

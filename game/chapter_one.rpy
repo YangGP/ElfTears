@@ -1,4 +1,5 @@
 label chapter1_part1:
+    "这里需要走廊的背景CG"
     s """
     海风126年，精灵之泪现世
 
@@ -11,7 +12,7 @@ label chapter1_part1:
     ……
     """
 
-    scene bg room corridor at bg_cover
+    scene bg school corridor at bg_cover
     with dissolve
     "走廊尽头的光线有些昏暗"
     "厚重的天鹅绒窗帘遮住了午后的阳光，只留有壁炉余烬的橙红映在一排画像上——"
@@ -218,6 +219,7 @@ label chapter1_part2:
     "随着对方说完，她们开始上前接过我和希薇娅手中的行李"
     x "啊，谢谢"
     p "感谢"
+    "这里需要学校走廊的背景CG，最好是有一些学生在走廊里走动的那种，能让人感觉到这是个热闹的校园环境"
     "???" "范斯特先生您好，维克里安学院欢迎您的到来"
     "刚到达接待厅不久，就有一位女仆领着其她几个女仆陆陆续续走过来"
     p "（对方应该是女仆长）"
@@ -251,7 +253,7 @@ label chapter1_part2:
     p "（扯得我都不能好好走路了）"
     "玛格丽特" "二位贵客，我们到了"
     "玛格丽特" "这里就是雷诺德校长的办公室，请进"
-    scene bg school reception room at bg_cover
+    scene bg school principal office at bg_cover
     "雷诺德" "好久不见[player_name]！"
     p "好久不见雷诺德，看到你这么精神我就放心了"
     p "我想，你应该不用再承受疾病所带来的困扰了？"
@@ -317,6 +319,8 @@ label chapter1_part2:
 
 label chapter1_part3:
     #过场cg
+    "这里需要学校走廊的背景CG，最好是有一些学生在走廊里走动的那种，能让人感觉到这是个热闹的校园环境"
+    show x clothes normal at x_gal_base
     x "我已经迫不及待要见到她了"
     "离开雷诺德的办公室，我和希薇娅继续在玛格丽特的带领下先去见见珍妮芙教授的学生——克拉丽丝"
     p "你对她了解多少？"
@@ -385,6 +389,7 @@ label chapter1_part3:
     p "好"
     "希薇娅轻轻敲响房门"
     k "请进"
+    scene bg school klls room at bg_cover
     """
     房门内的声音听起来有些清冷又夹杂着几分稚嫩
 
@@ -455,6 +460,7 @@ label chapter1_part3:
     p "嗯…请务必让我品尝一下奶油焗鸡。至于其它的就按你们的喜好来即可"
     k "好，跟我到这边来！"
     #厨房
+    "这里需要一个小小厨房的背景CG，最好是有一些厨房用具和食材的摆设"
     "我和希薇娅跟随克拉丽丝到一处隔间"
     x "哇，这里远比进来第一眼瞧着要大得多了"
     p "这边看起来像个小餐厅"
@@ -539,8 +545,6 @@ label chapter1_part3:
     p "好吧"
     "我将一直随身携带的手提包打开放在书桌上，然后从中摸出一本泛黄的日记"
     p "再过些时候它大概就经不起折腾了"
-    hide k clothes normal
-    show k clothes normal at k_gal_base with move
     k "[player_name]先生是想知道日记里写的是些什么内容吗？"
     p "如果能知道，那就想"
     p "它是我此次出来放松的幌子，我总得在回去之前做点什么"
@@ -584,6 +588,7 @@ label chapter1_part3:
     k "小心[player_name]先生！！！"
     p "吓着了？下次够不着别硬扯着身子去够"
     "我看着缩在我怀里的克拉丽丝，她皱着小眉头闭眼抿紧嘴唇，蜷缩着身子发抖"
+    "这里可以有公主抱的CG，克拉丽丝被我抱在怀里"
     p "(像受惊的鼠鼠。)"
     p "还好吗？"
     k "还……还好"
@@ -625,7 +630,7 @@ label chapter1_part3:
     p "我肯定能赚些许零花钱"
     k "这样吗…他们大概也不会轻易放弃吧"
     p "这可说不准"
-    #changeBg:common_bg/bg9.png -next
+    scene bg school villa at bg_cover
     "我跟随学院女仆前往我和希薇娅的临时住处"
     "女仆" "到了先生"
     p "多谢"
@@ -635,8 +640,6 @@ label chapter1_part3:
     "我走进这座屋子，里头有几所房间，我找到一个看有人为布置过的痕迹的房间走了进去"
     p "……"
     p "希薇？"
-    #changeBg:cg/xwy1.jpg -next
-    #unlockCg:cg/xwy1.jpg -name=琥珀色的等待 // 解锁CG并赋予名称
     scene bg room wait at bg_cover
     "我看着希薇娅四仰八叉地躺在床上愣在了原地"
     p "（我走错房间了？）"
@@ -710,7 +713,7 @@ label chapter1_part3:
     x "笨蛋！"
 
 label chapter1_part4:
-    #切换咖啡馆CG
+    scene bg cafe inside one at bg_cover
     "前台服务员" "您好，欢迎光临凯特咖啡馆。"
     p "（堪堪下午，我许久未觉得时光如此漫长。）"
     p "（让时间慢下来或许不是一件坏事。我现在需要喝杯咖啡安静地坐会来梳理下我往后的规划。）"
@@ -804,11 +807,13 @@ label chapter1_part4:
     p "重新来杯咖啡。"
     "你理了理衣领朝服务员唤道。"
     "这时咖啡馆的大门被人焦急的推开，我瞧见一个女孩——穿着看似校服，是维克里安学院的？"
+    show q clothes uniform at q_gal_right
     "女孩先看了眼就近倒地上呻吟的那个跟班，旁边是他陷入恐惧的同伙们。"
     "她再看向站在原地若无其事的我以及我旁边脑袋睡桌上了的杜勒斯。"
     "我注意到女孩眼神一凌，显然她误会了什么，哗啦几下就冲到了我的跟前。"
     "服务员" "等…等一下绮莉！"
     p "你跟这帮人混还是…？"
+    show q clothes uniform at q_gal_base with move
     "女孩没有理会你的话直接抬脚迅速且精准地就要往我脸上袭来。"
     "猫" "喵——"
     "猫叫的那一刻女孩的眼神霎时变得清澈，眼看着自己的腿已不受控制地朝我脑子扫来不禁张开小嘴。"
@@ -834,6 +839,7 @@ label chapter1_part4:
     p "……"
     p "（再见咖啡馆，还有小猫。）"
     # （三女的萌版CG图）
+    scene bg cafe inside two at bg_cover
     p "事实就是这样，长官。"
     "咖啡馆外，眼前的两位治安官面面相觑，来龙去脉确实跟在场的所有目击者对上了。"
     "自我防卫是真的，把人揍惨了也是真的。"
@@ -872,6 +878,9 @@ label chapter1_part4:
     "我心里莫名产生一股心虚的感觉，简直就像小时候在外磕了一身泥巴还没想好怎么回家面对母亲。"
     "罗莎" "你看你后面呢。"
     # （希薇娅和克拉丽丝的立绘出现，希薇娅的校园立绘皱眉，克拉丽丝初始立绘表情平淡或者没有）
+    show x clothes normal at x_gal_base
+    show k clothes normal at k_gal_right
+    show q clothes uniform at q_gal_left
     p "你…你是？"
     x "我是……？"
     p "我知道了，你是我亲爱的希薇。"
@@ -917,12 +926,15 @@ label chapter1_part4:
     p "（告诉她不必纠结这些…会这么想可能是正常的？）"
     x "……我和克拉丽丝先回去了。"
     x "记得我们说好的吗——别饿着，忙完回来吃饭，在外面吃完也行。"
+    hide x clothes normal with moveoutright
     k "希薇娅……"
     "克拉丽丝跟上希薇娅几步又转头表情认真地看向你。"
     k "[player_name]先生别在外面吃要回来吃喔，我来做给你吃！一定要记得！"
+    hide k clothes normal with moveoutright
     "罗莎" "绮莉，姐姐跟你说什么了？她们都是你的朋友别总自己一个人躲着，快跟上去。跟克拉丽丝和希薇娅学学做饭也好，以后不会饿着自己。"
     q "嗯……"
     "绮莉小声应下，脸上面无表情让人看不出她在想些什么。"
+    hide q clothes uniform with moveoutright
     "罗莎" "这孩子哎……好了，我们随便找处地来说说事吧。"
     p "这么随意可不像你，快说吧。"
     "罗莎" "不是什么非常私密的事。这挑事的来自当地的组织斯特顿你都知道了吧？"
@@ -978,19 +990,25 @@ label chapter1_part4:
 
 label chapter1_part5:
     # （插入三位女主的萌版CG）
+    scene bg school klls room at bg_cover
     "你回到了中午与克拉丽丝见面的那处住所，正准备敲门。"
     "（绮莉开门）"
+    show q clothes uniform at q_gal_right
     q "……"
     q "欢迎回来。（立绘面无表情）"
     # （克拉丽丝立绘出现）
+    show k clothes normal at k_gal_base
     k "[player_name]先生——"
     k "回来得正好，马上就能吃饭了。"
     p "谢谢。刚进门就能闻到香味，我的肚子已经开始敲锣打鼓了。"
     p "希薇娅呢？"
+    show k clothes normal at k_gal_left with move
     # （希薇娅立绘出现）
+    show x clothes uniform at x_gal_base
     x "快来帮忙端端菜，准备洗手吃饭。"
     p "这就来。"
     # （进入饭桌场景，最好能有个CG）
+    "吃饭CG"
     k "要找时间去买菜了。"
     x "到时候我去吧，要些什么可以列一个清单给我"
     k "嗯…还是一起吧。绮莉你要来吗？或者有什么想吃的到时候记得告诉我们。"
@@ -1087,16 +1105,20 @@ label chapter1_part5:
     p "（这一天也算快要过去了，我需要躺床上理理思绪让自己的状态放松下来然后好好地先睡上一觉。）"
     "你步入屋子，推开门听到希薇娅和克拉丽丝的交流声在楼道里传荡。"
     "听着还像是从你房间那传来的。"
+    scene bg school villa room at bg_cover
     k "[player_name]先生的床好大。"
     x "哼哼，特意为他选了一个最大的。躺着还蛮舒服，你要试试吗？"
     k "欸，可以吗？"
     x "嘿嘿，待会问问[player_name]的意见就行。"
     p "你们这是准备在我房间开睡衣派对吗？"
+    show k clothes normal at k_gal_base
     # （克拉丽丝的睡衣立绘出现）
     k "[player_name]先生你忙完啦？"
     k "我拿了些吃的给你，晚上刷牙前饿了可以解解馋。"
     p "谢谢，东西都搬来了吗？"
     k "欸嘿，都搬来了。"
+    show k clothes normal at k_gal_left
+    show x clothes uniform at x_gal_base
     # （希薇娅的睡衣立绘出现）（克拉丽丝立绘短暂消失）
     x "噔噔，[player_name]你觉得我这身如何，好看吗？"
     "第一眼你就感觉有什么东西蒙蔽了你的双眼，它在影响你的审美能力。"
@@ -1109,15 +1131,19 @@ label chapter1_part5:
     p "晚安。"
     k "我也先回房间了，[player_name]先生要早点睡别熬夜喔~"
     p "好，我会注意的。"
+    hide x clothes uniform with moveoutright
+    hide k clothes normal with moveoutright
     # （希薇娅和克拉丽丝的立绘消失）
     p "呼——"
     p "（我总感觉现实的走向有些奇怪，但又说不上来。）"
     p "（可能是我长时间紧张突然放松产生了什么滞后反应。）"
     p "（赶紧洗洗睡吧。）"
     # （设计绮莉的睡衣立绘突然浮现）
+    show q clothes uniform at q_gal_base
     p "……绮莉？"
     q "……"
     q "晚安。"
+    hide q clothes uniform with moveoutright
     # （设计绮莉的睡衣立绘滑动表示她匆匆溜走。）
     p "……？"
     # （进入希薇娅日常线——希薇娅的校园立绘萌版小人图插入）
