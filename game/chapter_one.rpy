@@ -1,5 +1,6 @@
 label chapter1_part1:
     "这里需要走廊的背景CG"
+    scene bg home corridor at bg_cover
     s """
     海风126年，精灵之泪现世
 
@@ -12,8 +13,6 @@ label chapter1_part1:
     ……
     """
 
-    scene bg school corridor at bg_cover
-    with dissolve
     "走廊尽头的光线有些昏暗"
     "厚重的天鹅绒窗帘遮住了午后的阳光，只留有壁炉余烬的橙红映在一排画像上——"
     "如同一部无声的家族史诗，服装的改变紧随着历史的进程"
@@ -219,6 +218,7 @@ label chapter1_part2:
     "随着对方说完，她们开始上前接过我和希薇娅手中的行李"
     x "啊，谢谢"
     p "感谢"
+    scene bg school corridor at bg_cover
     "这里需要学校走廊的背景CG，最好是有一些学生在走廊里走动的那种，能让人感觉到这是个热闹的校园环境"
     "???" "范斯特先生您好，维克里安学院欢迎您的到来"
     "刚到达接待厅不久，就有一位女仆领着其她几个女仆陆陆续续走过来"
@@ -319,6 +319,7 @@ label chapter1_part2:
 
 label chapter1_part3:
     #过场cg
+    scene bg school corridor at bg_cover
     "这里需要学校走廊的背景CG，最好是有一些学生在走廊里走动的那种，能让人感觉到这是个热闹的校园环境"
     show x clothes normal at x_gal_base
     x "我已经迫不及待要见到她了"
