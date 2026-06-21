@@ -18,7 +18,8 @@ label chapter1_part1:
     "如同一部无声的家族史诗，服装的改变紧随着历史的进程"
     "铜牌上的名字一个接一个掠过直至最后，上面写着"
 
-    $ player_name = renpy.input("你的名字是？", default="凛恩", length=8, screen="input").strip()
+    $ player_name_input = renpy.input("你的名字是？", default="凛恩", length=8, screen="input")
+    $ player_name = player_name_input.strip() if isinstance(player_name_input, str) else "凛恩"
     if not player_name:
         $ player_name = "凛恩"
 
