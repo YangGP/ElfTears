@@ -18,7 +18,8 @@ label chapter1_part1:
     "如同一部无声的家族史诗，服装的改变紧随着历史的进程"
     "铜牌上的名字一个接一个掠过直至最后，上面写着"
 
-    $ player_name = renpy.input("你的名字是？", default="凛恩", length=8, screen="input").strip()
+    $ player_name_input = renpy.input("你的名字是？", default="凛恩", length=8, screen="input")
+    $ player_name = player_name_input.strip() if isinstance(player_name_input, str) else "凛恩"
     if not player_name:
         $ player_name = "凛恩"
 
@@ -218,7 +219,7 @@ label chapter1_part2:
     "随着对方说完，她们开始上前接过我和希薇娅手中的行李"
     x "啊，谢谢"
     p "感谢"
-    scene bg school corridor at bg_cover
+    scene bg school corridor1 at bg_cover
     "这里需要学校走廊的背景CG，最好是有一些学生在走廊里走动的那种，能让人感觉到这是个热闹的校园环境"
     "???" "范斯特先生您好，维克里安学院欢迎您的到来"
     "刚到达接待厅不久，就有一位女仆领着其她几个女仆陆陆续续走过来"
