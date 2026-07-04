@@ -52,10 +52,10 @@ transform rotate_360_once:
 label start:
 
     menu:
-        "精灵之泪":
-            n "您选择了查看精灵之泪。"
-            n "这是一个非常有趣的选项！"
+        "精灵之泪 第一章":
             jump chapter1_part1
+        "精灵之泪 第二章":
+            jump chapter2_part1
         "测试选项":
             n "您选择了测试选项。"
             jump menu_start
