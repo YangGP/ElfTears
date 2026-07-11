@@ -69,6 +69,27 @@ transform k_gal_right:
     xpos 0.8
     xanchor 0.5
 
+transform custom_image_center:
+    zoom 0.34      # 等比缩小
+    xpos 0.5      # 在屏幕上的水平位置（0.5 会让立绘水平居中）
+    yanchor 1.0    # 锚点定在立绘底部
+    xanchor 0.5    # 锚点定在立绘水平中心
+    ypos 1.00      # 在屏幕上的垂直位置（1.05 会让立绘脚部稍微沉入屏幕下方一点，更自然）
+
+transform custom_image_left:
+    zoom 0.34      # 等比缩小
+    xpos 0.2      # 在屏幕上的水平位置（0.2 会让立绘水平居中）
+    yanchor 1.0    # 锚点定在立绘底部
+    xanchor 0.5    # 锚点定在立绘水平中心
+    ypos 1.00      # 在屏幕上的垂直位置（1.05 会让立绘脚部稍微沉入屏幕下方一点，更自然）
+
+transform custom_image_right:
+    zoom 0.34      # 等比缩小
+    xpos 0.8      # 在屏幕上的水平位置（0.8 会让立绘水平居中）
+    yanchor 1.0    # 锚点定在立绘底部
+    xanchor 0.5    # 锚点定在立绘水平中心
+    ypos 1.00      # 在屏幕上的垂直位置（1.05 会让立绘脚部稍微沉入屏幕下方一点，更自然）
+
 # 定义时直接计算 zoom
 image nora casual open = Transform("images/Nora_NoranekoGames/nora casual_open.png", zoom=get_height_zoom("images/Nora_NoranekoGames/nora casual_open.png", 900), yalign=1.0)
 image nora casual smile = Transform("images/Nora_NoranekoGames/nora casual_smile.png", zoom=get_height_zoom("images/Nora_NoranekoGames/nora casual_smile.png", 900), yalign=1.0)

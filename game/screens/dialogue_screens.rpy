@@ -160,7 +160,7 @@ screen nvl_dialogue(dialogue):
 
 
 ## 此语句控制一次可以显示的 NVL 模式条目的最大数量。
-define config.nvl_list_length = 6
+define config.nvl_list_length = 10
 
 # The style for the NVL "textbox"
 style nvl_window:

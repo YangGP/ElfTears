@@ -4,9 +4,9 @@
 default player_name = "凛恩"
 # 声明此游戏使用的角色。颜色参数可使角色姓名着色。
 define p = Character("[player_name]", color="#1a365d")
-define x = Character("希薇娅", color="#722f37")
-define k = Character("克拉丽丝", color="#0b5334")
-define q = Character("绮莉", color="#3a4750")
+define xwy = Character("希薇娅", color="#722f37")
+define klls = Character("克拉丽丝", color="#0b5334")
+define ql = Character("绮莉", color="#3a4750")
 define s = Character(None, kind=nvl)
 
 define n = Character("Nora", color="#0b5334")
@@ -94,6 +94,9 @@ label start:
             n "您选择了查看精灵之泪。"
             n "这是一个非常有趣的选项！"
             jump chapter1_part1
+        "新立绘":
+            n "您选择了查看新立绘。"
+            jump new_character
         "背景变化":
             n "您选择了查看背景变化。"
             jump bg_change
@@ -107,6 +110,10 @@ label start:
             n "这就结束了吗？好吧，结束游戏！"
             jump end
 
+
+    label new_character:
+        show klls uniform1 微笑 at custom_image_center
+        klls "您好，我是克拉丽丝。"
 
     label bg_change:
         $ first_meet = False
